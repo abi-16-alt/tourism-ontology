@@ -1,0 +1,36 @@
+@prefix : <http://example.org/tourism#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:TouristAttraction rdf:type owl:Class .
+:HighlyRated rdf:type owl:Class ;
+             rdfs:subClassOf :TouristAttraction .
+
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain :TouristAttraction ;
+         rdfs:range xsd:string .
+
+:hasLocation rdf:type owl:DatatypeProperty ;
+             rdfs:domain :TouristAttraction ;
+             rdfs:range xsd:string .
+
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TouristAttraction ;
+           rdfs:range xsd:decimal .
+
+:tajMahal a :HighlyRated ;
+          :hasName "Taj Mahal" ;
+          :hasLocation "Agra" ;
+          :hasRating "4.8"^^xsd:decimal .
+
+:charminar a :HighlyRated ;
+            :hasName "Charminar" ;
+            :hasLocation "Hyderabad" ;
+            :hasRating "4.6"^^xsd:decimal .
+
+:badAttraction a :TouristAttraction ;
+               :hasName "Old Fort" ;
+               :hasLocation "Unknown" ;
+               :hasRating "3.9"^^xsd:decimal .
