@@ -1,4 +1,17 @@
 {
   "type": "FeatureCollection",
-  "features": []
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taj Mahal",
+        "location": "Agra",
+        "rating": 4.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [78.0421, 27.1751]
+      }
+    }
+  ]
 }
