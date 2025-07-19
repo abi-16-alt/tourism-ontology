@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.dashboard.controller.DashboardController"
+      spacing="10" prefWidth="800" prefHeight="600">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Filter bar -->
+    <HBox spacing="10">
+        <TextField fx:id="keywordField" promptText="Search..." />
+        <ComboBox fx:id="typeComboBox" promptText="Type" />
+        <DatePicker fx:id="fromDate" />
+        <DatePicker fx:id="toDate" />
+        <Button text="Search" onAction="#onSearch" />
+    </HBox>
+
+    <!-- TableView -->
+    <TableView fx:id="resultTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="subjectColumn" text="Subject" />
+            <TableColumn fx:id="predicateColumn" text="Predicate" />
+            <TableColumn fx:id="objectColumn" text="Object" />
+        </columns>
+    </TableView>
+
+</VBox>
